@@ -1,4 +1,57 @@
  body {
-            background: #d5d5d5;
-            font-family: 'Roboto', sans-serif;
-        }
+     background: #d5d5d5 !important;
+     font-family: 'Roboto', sans-serif;
+ }
+ 
+@keyframes fly-in-from-left {
+  from {
+    transform:translateY(15rem) rotate(15deg);
+    opacity:0;
+  }
+}
+
+@keyframes fly-in-from-right {
+  from {
+    transform:translateY(15rem) rotate(-15deg);
+    opacity:0;
+  }
+}
+
+.panel{
+    padding: 0px;
+}
+ .welcome_header {
+        height: 20vh;
+    background-image: url(../img/i2_1.jpg);
+    background-size: cover;
+}
+
+.welcome_user_head{
+    display: block;
+    width: 36%;
+    margin: auto;
+    position: relative;
+    top: 10vh;
+}
+
+.welcome_user_head_img{
+        width: 100%;
+    border-radius: 80px;
+}
+
+.diy_card{
+     padding:1.5rem;
+  box-shadow:0 1px 2px #aaa;
+  background:white;
+  margin:0 1rem 1rem;
+  border-radius:3px;
+  user-select:none;
+/*  animation:fly-in-from-left .5s 1s ease both;*/
+  transform-origin:top left;
+}
+
+
+.welcome_body{
+    height: 60vh;
+    margin-top: 20vh;
+}
