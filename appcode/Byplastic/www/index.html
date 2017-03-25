@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="lib/appframework/af.ui.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <link rel="stylesheet" href="css/style.css">
 
     <script type="text/javascript" charset="utf-8" src="lib/jquery.min.js"></script>
@@ -25,13 +25,13 @@
     <script type="text/javascript" charset="utf-8" src="lib/appframework/appframework.ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
     <script src='cordova.js'></script>
-    
 
-    
+
+
     <script src="js/script.js"></script>
 
     <style>
-       
+
 
     </style>
 </head>
@@ -55,76 +55,78 @@
         <div class="pages">
             <div class="panel" id="main" data-title="Home" data-selected="true">
                 <div class="welcome_header">
-                    
+
                     <div class="welcome_user_head">
-                        
-<!--                         <img class="welcome_user_head_img" src="http://lorempixel.com/400/400/sports/3" alt="" style="    width: 100%;">-->
-                         <img class="welcome_user_head_img" src="https://scontent-sit4-1.xx.fbcdn.net/v/t1.0-1/c17.0.160.160/p160x160/1502575_584421594970505_1558017440_n.jpg?oh=9f29c3d2efe979d1a710628501114fff&oe=5955975F" alt="" style="    width: 100%;">
-                        
+
+                        <!--                         <img class="welcome_user_head_img" src="http://lorempixel.com/400/400/sports/3" alt="" style="    width: 100%;">-->
+                        <img class="welcome_user_head_img" src="https://scontent-sit4-1.xx.fbcdn.net/v/t1.0-1/c17.0.160.160/p160x160/1502575_584421594970505_1558017440_n.jpg?oh=9f29c3d2efe979d1a710628501114fff&oe=5955975F" alt="" style="    width: 100%;">
+
                     </div>
-                    
-                   
+
+
                 </div>
-                
+
                 <div class="welcome_body">
-                   
-                   <div id="user_name">
-                       Roopak Nijhara
-                   </div>
-                   
-                   <div id="user_location">
+
+                    <div id="user_name">
+                        Roopak Nijhara
+                    </div>
+
+                    <div id="user_location">
                         Okkiyampet, Chennai
-                   </div>
-                    
+                    </div>
+
                     <div class="welcome_header_add">
                         <button id="recycle_btn">
 <!--                            <i class="fa fa-plus" aria-hidden="true"></i> -->
-                            Recycle Now
+<!--                            Recycle Now-->
+                            <a href="#page7" onclick="$.afui.clearHistory()" style="color: black;text-decoration: none;">Recycle Now</a>
+<!--                            <a href="#page7"  style="color: black;text-decoration: none;">Recycle Now</a>-->
                         </button>
                     </div>
-                   
-                   
-                   <div class="tile_section">
-                       
-                       <div class="tile">
-                           <div class="inner_tile">
-                              
-                              <div class="tile_value">14</div>
-                              <div class="tile_value_label">Carbon Footprint</div>
-                              
-                           </div>
+
+
+                    <div class="tile_section">
+
+                        <div class="tile">
+                            <div class="inner_tile">
+
+                                <div class="tile_value">14</div>
+                                <div class="tile_value_label">Carbon Footprint</div>
+
+                            </div>
                         </div>
-                          <div class="tile">
-                           <div class="inner_tile">
-                             
-                               <div class="tile_value">Rs. 25</div>
-                              <div class="tile_value_label">Total Earned</div>
-                              
-                           </div>
+                        <div class="tile">
+                            <div class="inner_tile">
+
+                                <div class="tile_value">Rs. 25</div>
+                                <div class="tile_value_label">Total Earned</div>
+
+                            </div>
                         </div>
-                          <div class="tile">
-                           <div class="inner_tile">
-                             
-                               <div class="tile_value">2145th </div>
-                              <div class="tile_value_label">Green Ranking</div>
-                              
-                           </div>
+                        <div class="tile">
+                            <div class="inner_tile">
+
+                                <div class="tile_value">2145th </div>
+                                <div class="tile_value_label">Green Ranking</div>
+
+                            </div>
                         </div>
-                          
-                          <div class="tile">
-                           <div class="inner_tile">
-                              
+
+                        <div class="tile">
+                            <div class="inner_tile">
+
                                 <div class="tile_value"></div>
-                              <div class="tile_value_label">Better than 30% <br> of Chennai </div>
-                               
-                           </div>
+                                <div class="tile_value_label">Better than 30% <br> of Chennai </div>
+
+                            </div>
                         </div>
-                       
-                       
-                   </div>
-                   
-                   
-                    
+
+
+                    </div>
+
+
+
                 </div>
             </div>
             <div class="panel" id="page2" data-title="Profile">
@@ -139,18 +141,143 @@
                 Feed
             </div>
             <div class="panel" id="page4" data-title="Browse">
-                Browse
+
+
+                <div id="searchSection" style="    margin-top: 8px;">
+
+                    <input type="text" placeholder="Search" style="    width: 88%;">
+
+                    <button id="search_btn" style=""><i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
+
+                <div id="product_browse_section">
+
+                    <!--                    <div class="prod_list_left">-->
+                    <div class="prod_listing_card">
+
+                        <img class="prod_listing_card_img" src="http://lorempixel.com/300/400" alt="" style="">
+
+                        <span class="prod_listing_card_price"> <i class="fa fa-inr" aria-hidden="true"></i>&nbsp;400 </span>
+
+                        <span class="prod_listing_card_num"> 40 </span>
+
+                        <div class="prod_listing_card_text">
+                            test text here
+                        </div>
+
+                    </div>
+                    <div class="prod_listing_card">
+                        <img class="prod_listing_card_img" src="http://lorempixel.com/300/200" alt="" style="    width: 100%;">
+
+                        <span class="prod_listing_card_price"> <i class="fa fa-inr" aria-hidden="true"></i>&nbsp;400 </span>
+
+                        <span class="prod_listing_card_num"> 40 </span>
+
+                        <div class="prod_listing_card_text">
+                            test text here
+                        </div>
+                    </div>
+                    <div class="prod_listing_card">
+                        <img class="prod_listing_card_img" src="http://lorempixel.com/300/100" alt="" style="    width: 100%;">
+
+                        <span class="prod_listing_card_price"> <i class="fa fa-inr" aria-hidden="true"></i>&nbsp;400 </span>
+
+                        <span class="prod_listing_card_num"> 40 </span>
+
+                        <div class="prod_listing_card_text">
+                            test text here
+                        </div>
+                    </div>
+                    <div class="prod_listing_card">
+                        <img class="prod_listing_card_img" src="http://lorempixel.com/300/500" alt="" style="    width: 100%;">
+
+                        <span class="prod_listing_card_price"> <i class="fa fa-inr" aria-hidden="true"></i>&nbsp;400 </span>
+
+                        <span class="prod_listing_card_num"> 40 </span>
+
+                        <div class="prod_listing_card_text">
+                            test text here
+                        </div>
+                    </div>
+                    <!--
+                    </div>
+                    <div class="prod_list_right">
+-->
+                    <div class="prod_listing_card">
+                        <img class="prod_listing_card_img" src="http://lorempixel.com/300/200" alt="" style="    width: 100%;">
+
+                        <span class="prod_listing_card_price"> <i class="fa fa-inr" aria-hidden="true"></i>&nbsp;400 </span>
+
+                        <span class="prod_listing_card_num"> 40 </span>
+
+                        <div class="prod_listing_card_text">
+                            test text here
+                        </div>
+
+                    </div>
+                    <div class="prod_listing_card">
+                        <img class="prod_listing_card_img" src="http://lorempixel.com/300/500" alt="" style="    width: 100%;">
+
+                        <span class="prod_listing_card_price"> <i class="fa fa-inr" aria-hidden="true"></i>&nbsp;400 </span>
+
+                        <span class="prod_listing_card_num"> 40 </span>
+
+                        <div class="prod_listing_card_text">
+                            test text here
+                        </div>
+                    </div>
+                    <div class="prod_listing_card">
+                        <img class="prod_listing_card_img" src="http://lorempixel.com/300/300" alt="" style="    width: 100%;">
+
+                        <span class="prod_listing_card_price"> <i class="fa fa-inr" aria-hidden="true"></i>&nbsp;400 </span>
+
+                        <span class="prod_listing_card_num"> 40 </span>
+
+                        <div class="prod_listing_card_text">
+                            test text here
+                        </div>
+                    </div>
+                    <div class="prod_listing_card">
+                        <img class="prod_listing_card_img" src="http://lorempixel.com/300/400" alt="" style="    width: 100%;">
+
+                        <span class="prod_listing_card_price"> <i class="fa fa-inr" aria-hidden="true"></i>&nbsp;400 </span>
+
+                        <span class="prod_listing_card_num"> 40 </span>
+
+                        <div class="prod_listing_card_text">
+                            test text here
+                        </div>
+                    </div>
+                    <!--                    </div>-->
+
+                    <div class="prod_listing_card"></div>
+                    <div class="prod_listing_card"></div>
+
+
+                </div>
+
+
+
             </div>
             <div class="panel" id="page5" data-title="DIY">
                 <div class="diy_card">
-                   
-                   <img src="http://lorempixel.com/400/200/people/1" alt="" style="    width: 100%;">
-                    
-                </div><div class="diy_card">
-                   
-                   <img src="http://lorempixel.com/400/200/people/2" alt="" style="    width: 100%;">
-                    
+
+                    <img src="http://lorempixel.com/400/200/people/1" alt="" style="    width: 100%;">
+
                 </div>
+                <div class="diy_card">
+
+                    <img src="http://lorempixel.com/400/200/people/2" alt="" style="    width: 100%;">
+
+                </div>
+            </div>
+
+            <div class="panel" id="page6" data-title="Chat">
+
+            </div>
+
+            <div class="panel" id="page7" data-title="Enter ">
+                <h3> test page</h3>
             </div>
         </div>
 
@@ -162,11 +289,12 @@
                 <div class="pages" style="    background: #f8f8f8;">
                     <div class="panel active" id="navPage1" data-title="Foobar">
                         <ul class="list">
-                            <li><a href="#main" onclick="$.afui.clearHistory()">Home</a></li>
-                            <li><a href="#page2" onclick="$.afui.clearHistory()">Profile</a></li>
-                            <li><a href="#page3" onclick="$.afui.clearHistory()">Feed</a></li>
-                            <li><a href="#page4" onclick="$.afui.clearHistory()">Browse</a></li>
-                            <li><a href="#page5" onclick="$.afui.clearHistory()">DIY</a></li>
+                            <li><a href="#main" onclick="$.afui.clearHistory()"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a></li>
+                            <li><a href="#page2" onclick="$.afui.clearHistory()"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;Profile</a></li>
+                            <li><a href="#page3" onclick="$.afui.clearHistory()"><i class="fa fa-rss" aria-hidden="true"></i>&nbsp;Feed</a></li>
+                            <li><a href="#page4" onclick="$.afui.clearHistory()"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;Browse</a></li>
+                            <li><a href="#page5" onclick="$.afui.clearHistory()"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>&nbsp;DIY</a></li>
+                            <li><a href="#page6" onclick="$.afui.clearHistory()"><i class="fa fa-commenting" aria-hidden="true"></i>&nbsp;Chat</a></li>
                         </ul>
                     </div>
                 </div>
