@@ -35,7 +35,7 @@ class Seller_Service_Class:
         return Product.get_all_active_products()
 
     def search_by_category(self):
-        return Product.get_products_by_criteria(category=None,min_price=None)
+        return Product.get_products_by_criteria(product_name= None,category=None,subcategory=None,description=None,min_price=None,price=None)
 
     def active_users(self):
         return User.get_all_active_users()
