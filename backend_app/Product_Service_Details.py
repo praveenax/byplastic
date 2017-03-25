@@ -1,6 +1,7 @@
 from backend_app import Utils
 from models import Product
-
+from models import User
+from models import ProductTxn
 
 class Seller_Service_Class:
 
@@ -35,6 +36,24 @@ class Seller_Service_Class:
 
     def search_by_category(self):
         return Product.get_products_by_criteria(category=None,min_price=None)
+
+    def active_users(self):
+        return User.get_all_active_users()
+
+    def add_an_user(self,user_dict):
+        user_name = user_dict["user_name"]
+        category = user_dict["category"]
+        location = user_dict["location"]
+        contact_id = user_dict["contact_id"]
+        cdt = Utils.currentdatetime()
+        created_at = user_dict["cdt"]
+        user = User()
+        return User.save(user)
+
+
+
+
+
 
 
 
