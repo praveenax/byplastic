@@ -6,7 +6,7 @@
 
     <title>
 
-    </title>
+</title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -15,14 +15,22 @@
 
     <link rel="stylesheet" type="text/css" href="lib/appframework/icons.css" />
     <link rel="stylesheet" type="text/css" href="lib/appframework/af.ui.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
     <script type="text/javascript" charset="utf-8" src="lib/jquery.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="lib/fastclick.min.js"></script>
 <script type="text/javascript" charset="utf-8" src="lib/appframework/appframework.ui.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
     <script src='cordova.js'></script>
+    <script src="js/script.js"></script>
 
-
+    <style>
+        body{
+            background: #d5d5d5;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        </style>
 </head>
 
 <body>
@@ -45,17 +53,22 @@
             <div class="panel" id="main" data-title="Main" data-selected="true">
                 This is main page
             </div>
-            <div class="panel" id="page2" data-title="Page 2">
-                This is Page 2 - Profile
+            <div class="panel" id="page2" data-title="Profile">
+                Profile
+                
+                <br>
+                
+                
+                
             </div>
-               <div class="panel" id="page3" data-title="Page 2">
-                This is Page 3 - Feed
+               <div class="panel" id="page3" data-title="Feed">
+                Feed
             </div>
-               <div class="panel" id="page4" data-title="Page 2">
-                This is Page 4 - Browse
+               <div class="panel" id="page4" data-title="Browse">
+                Browse
             </div>
-               <div class="panel" id="page5" data-title="Page 2">
-                This is Page 5 - DIY
+               <div class="panel" id="page5" data-title="DIY">
+                DIY
             </div>
         </div>
 
@@ -77,6 +90,9 @@
                 </div>
             </div>
         </nav>
+        
+        
+        
 
     </div>
 </body>
