@@ -52,6 +52,59 @@
 
 
 .welcome_body{
-    height: 60vh;
-    margin-top: 20vh;
+    height: 50vh;
+    margin-top: 14vh;
+}
+
+#recycle_btn{
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    margin: auto;
+    display: block;
+    border: 1px solid transparent;
+}
+
+#user_name{
+    text-align: center;
+    font-size: 20px;
+    color: #565656;
+    padding-bottom: 15px;
+}
+
+#user_location{
+    text-align: center;
+    font-size: 14px;
+    color: grey;
+    padding-bottom: 15px;
+}
+
+
+.tile{
+        width: 50%;
+/*    background: #fff;*/
+    margin-top: 5px;
+    height: 15vh;    float: left;
+    padding: 5px;
+}
+
+.inner_tile{
+        background: #fff;
+    height: 100%;
+   box-shadow:  2px 0px 9px 2px rgba(128, 128, 128, 0.17);
+}
+
+.tile_value{
+    font-size: 20px;
+    text-align: center;
+    padding: 16px 0px;
+    padding-bottom: 4px;
+        color: #565656;
+}
+
+.tile_value_label{
+/*        font-size: 24px;*/
+    text-align: center;
+    padding: 10px 0px;
+        color: #565656;
 }
