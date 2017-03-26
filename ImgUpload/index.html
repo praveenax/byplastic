@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Mini Ajax File Upload Form</title>
+
+		<!-- Google web fonts -->
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel='stylesheet' />
+
+		<!-- The main CSS file -->
+		<link href="assets/css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+
+		<form id="upload" style="width: 500px;">
+			<div id="drop">
+				Drop Here<br/><br/>
+
+				<a>Browse</a>
+				<input type='file' id="imgInp" />
+			</div>
+
+			<ul>
+				<!-- The file uploads will be shown here -->
+				<img style="display:block; margin:auto;" id="blah" src="#" alt="your image" />
+
+			</ul>
+
+		</form>
+
+
+		<!-- JavaScript Includes -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="assets/js/jquery.knob.js"></script>
+
+		<!-- jQuery File Upload Dependencies -->
+		<script src="assets/js/jquery.ui.widget.js"></script>
+		<script src="assets/js/jquery.iframe-transport.js"></script>
+		<script src="assets/js/jquery.fileupload.js"></script>
+
+		<!-- Our main JS file -->
+		<script src="assets/js/script.js"></script>
+
+
+		<!-- Only used for the demos. Please ignore and remove. -->
+        <script src="http://cdn.tutorialzine.com/misc/enhance/v1.js" async></script>
+
+		<script type="text/javascript">
+			function readURL() {
+				//	rehide the image and remove its current "src",
+				//	this way if the new image doesn't load,
+				//	then the image element is "gone" for now
+				$('#blah').attr('src', '').hide();
+				if (this.files && this.files[0]) {
+					var reader = new FileReader();
+					$(reader).load(function(e) {
+						$('#blah')
+							//	first we set the attribute of "src" thus changing the image link
+							.attr('src', e.target.result)	//	this will now call the load event on the image
+					});
+					reader.readAsDataURL(this.files[0]);
+				}
+				}
+
+				//	below makes use of jQuery chaining. This means the same element is returned after each method, so we don't need to call it again
+				$('#blah')
+				//	here we first set a "load" event for the image that will cause it change it's height to a set variable
+				//		and make it "show" when finished loading
+				.load(function(e) {
+					//	$(this) is the jQuery OBJECT of this which is the element we've called on this load method
+					$(this)
+						//	note how easy adding css is, just create an object of the css you want to change or a key/value pair of STRINGS
+						.css('height', '200px')	//	or .css({ height: '200px' })
+						//	now for the next "method" in the chain, we show the image when loaded
+						.show();	//	just that simple
+				})
+				//	with the load event set, we now hide the image as it has nothing in it to start with
+				.hide();	//	done
+
+				$("#imgInp").change(readURL);
+		</script>
+
+	</body>
+</html>
